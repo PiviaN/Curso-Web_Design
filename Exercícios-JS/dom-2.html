@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Input + DOM</title>
+    </head>
+    <body>
+        <input type="text" class="input-text">
+        <input type="submit" value="Bem-vindo" onclick="mostraNome()">
+
+        <script>
+
+            
+
+            function mostraNome() {
+                var input = document.querySelector('.input-text').value;
+                
+                alert('Bem vindo, ' + input);
+
+            }
+
+            
+
+        </script>
+
+    </body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Introdução ás Arrays</title>
+    </head>
+    <body>
+        <div id="output"></div>
+
+        <script>
+            var produtos = new Array('geladeira', 'churrasqueira', 'fausto-silva', 'gil-da-esfiha');
+
+            var output = document.querySelector('#output');
+            var msg = "";
+            
+            produtos.push('Joelma');
+
+            for (var i = 0; i < produtos.length; i++) {
+                msg += 'produto ' + (i + 1) + ': '+ produtos[i] + '<br>';
+            }
+
+            output.innerHTML = msg;
+        </script>
+    </body>
+</html>

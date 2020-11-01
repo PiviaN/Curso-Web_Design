@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Meu CSS Não funciona</title>
+        <meta charset="utf-8">
+        
+        
+        <style>
+            
+            body{
+                margin: 0;
+            }
+                        
+            #externa{
+                background: yellow;
+                width: 80vw; /* relacionada ao width da viewport (desconsidera o container) */
+                height: 80vh; /* relacionada a altura da viewport */
+            }
+            
+            #interna{
+                width: 90vmin;
+                height: 80%; /* quando tivermos trabalhando com height, é bom sempre evitar de usar porcentagem,
+                                porque podem aparecer problemas, pois o height é relacionado ao seu elemento
+                                pai (container) */
+                background: orange;
+                    
+            }
+                        
+        
+        </style>
+        
+    </head>
+    <body>
+        
+                    
+                <header>
+              <div id="externa">externa
+              
+                  <div id="interna">INTERNA</div>
+              
+              </div>
+                </header>
+               
+        
+        
+    </body>
+</html>

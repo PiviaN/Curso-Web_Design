@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Tabuada JS</title>
+    </head>
+    <body>
+        <button onclick="novaTabuada()">Nova Tabuada</button>
+        <button onclick="limparTabuada()">Limpar Tabuada</button>
+        <div id="espaco"></div>
+        <script>
+
+function novaTabuada() {
+            var nPrompt = prompt('Digite um número');
+            limparTabuada();
+            nPrompt = parseFloat(nPrompt);
+
+            var indice = 1;
+            
+            
+            while (indice <= 1000) {
+                mensagem += nPrompt + 'x' + indice + ' = ' + (nPrompt*indice) + '<br>';
+                indice++
+            
+                }
+                
+                espaco.innerHTML = mensagem;
+                
+            }
+
+            function limparTabuada() {
+                mensagem = "";
+                espaco.innerHTML = mensagem;
+            }
+
+            var espaco = document.querySelector('#espaco');
+            
+            var mensagem = '';
+        
+        </script>
+
+        
+    </body>
+</html>

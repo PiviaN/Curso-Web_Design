@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Segundo exercício de Objeto</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <div id="output"></div>
+
+        <script>
+            var dadosPessoa = [
+                {'nome': 'Joel Santana', 'email': 'sabedenadainocente@hotmail.com'},
+                {'nome': 'Chimbinha', 'email': 'joelmameperdoa@gmail.com'},
+                {'nome': 'Irineu', 'email': 'vocenaosabenemeu@gmail.com'}
+            ]
+
+            var msg = "";
+            
+
+            for(var i = 0; i < dadosPessoa.length; i++) {
+                msg += 'O nome do cabra é: ' + dadosPessoa[i].nome + '<br>' + 'e o email dele é: ' + dadosPessoa[i].email + '<br><br>'
+            }
+
+            var output = document.querySelector('#output').innerHTML = msg;
+        </script>
+    </body>
+</html>

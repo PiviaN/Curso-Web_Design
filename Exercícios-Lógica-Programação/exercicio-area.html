@@ -1,0 +1,45 @@
+<!DOCTYPE HTML>
+
+<html>
+    <head>
+        <title>Exercício Área</title>
+        <meta charset="UTF-8">
+    </head>
+
+    <body>
+        <button onclick="mostrarResultadoAlert()">Mostrar resultado no Alert</button>
+        <button onclick="mostrarResultadoHTML()">Mostrar resultado no html</button>
+        <div id="output"></div>
+
+        <script>
+                
+
+                function mostrarResultadoAlert() {
+                    var largura = prompt('Digite a largura');
+                    largura = parseFloat(largura);
+
+                    var altura = prompt('Digite a altura');
+                    altura = parseFloat(altura);
+                    var area = mostrarArea(largura, altura);
+
+                    alert('A área total é:' + area);
+                }
+
+                function mostrarResultadoHTML() {
+                    var largura = prompt('Digite a largura');
+                    largura = parseFloat(largura);
+
+                    var altura = prompt('Digite a altura');
+                    altura = parseFloat(altura);
+                    var area = mostrarArea(largura, altura);
+
+                    document.querySelector('#output').innerHTML = 'A área total é: ' + area;
+                }
+
+                function mostrarArea(l, a){
+                    return l * a;
+                }
+        </script>
+    </body>
+
+</html>

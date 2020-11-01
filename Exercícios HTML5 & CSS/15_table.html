@@ -1,0 +1,84 @@
+<!doctype html>
+<!-- doctype informa ao agente de usuario a versão do html que deve ser renderizada-->
+<html lang="pt-br">
+    <head>
+        <title> pagina de exemplo estrutura basica </title>
+        <meta charset="utf-8">
+        <meta name="author" content="Daniel">
+        <meta name="description" content="descrição bacanuda">
+        <meta name="keywords" content="html5, tecnologia">
+        
+        <style>
+            body{
+                font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            }          
+            
+            table{
+                border-collapse: collapse;
+                width: 90%;
+                margin: auto;
+                background: snow;
+            }
+            
+            th{
+                background: gold;
+                border: 2px solid teal;
+                padding: 15px;
+            }
+            
+            td{
+                border: 1px solid teal;
+                text-align: center;
+                padding: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        
+        <table>
+            
+            <caption>Tabela de preços de carros</caption>
+            
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Marca</th>
+                    <th>Preço</th>
+                    <th>Ano de Lançamento</th>
+                </tr>
+            </thead>
+            
+            <tfoot>
+                <tr>
+                    <td colspan="4">Preços atualizados nacionais.</td>
+                </tr>
+            </tfoot>
+            
+            <tbody>
+                <tr>
+                    <td rowspan="3">Fusca</td>
+                    <td>Básica</td> <td>R$ 1.000,00</td> <td>1993</td>
+                </tr>
+                
+                <tr><td>Brasileira </td> <td>R$ 1.500,00</td> <td>1989</td></tr>
+                
+                <tr><td>Volkwswagen</td> <td>R$ 2.000,00</td> <td>1985</td></tr>
+
+                <tr>
+                    <td rowspan="3">Lamborghini</td>
+                    <td>Huracan</td> <td>R$ 180.000,00</td> <td>2013</td></tr>
+                    <tr><td>Aventador</td> <td>R$ 175.500,00</td> <td>2016</td></tr>
+                    <tr><td>350 GT</td> <td>R$ 90.000,00</td> <td>1963</td></tr>
+                    
+                <tr>
+                    <td rowspan="3">Maserati</td>
+                    <td>Quattroporte</td> <td>R$ 330.000,00</td> <td>2018</td></tr>
+                    <tr><td>Levante</td> <td>R$ 400.00,00</td> <td>2017</td></tr>
+                    <tr><td>GranCabrio</td> <td>R$ 650.000,00</td> <td>2019</td></tr>
+                </tr>
+            </tbody>
+            
+        </table>
+        
+    </body>
+</html>

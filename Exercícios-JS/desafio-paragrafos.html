@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Exercício - Mostrar 200</title>
+        <meta charset="UTF-8">
+    </head>
+
+    <body>
+        <h1>Seleção de Parágrafos</h1>
+
+        <p>Lorem ipsum dolor 
+        sit amet consectetur adipisicing elit.
+        Tempora quibusdam quisquam nesciunt nisi excepturi enim rem eos,
+        repellendus architecto aperiam, sequi at.
+        Consectetur repudiandae eaque unde voluptates!
+        Recusandae, sit tenetur.</p>
+        <p>Lorem ipsum dolor 
+        sit amet consectetur adipisicing elit.
+        Tempora quibusdam quisquam nesciunt nisi excepturi enim rem eos,
+        repellendus architecto aperiam, sequi at.
+        Consectetur repudiandae eaque unde voluptates!
+        Recusandae, sit tenetur.</p>
+    <p>Lorem ipsum dolor 
+        sit amet consectetur adipisicing elit.
+        Tempora quibusdam quisquam nesciunt nisi excepturi enim rem eos,
+        repellendus architecto aperiam, sequi at.
+        Consectetur repudiandae eaque unde voluptates!
+        Recusandae, sit tenetur.</p>
+        <p>Lorem ipsum dolor 
+            sit amet consectetur adipisicing elit.
+            Tempora quibusdam quisquam nesciunt nisi excepturi enim rem eos,
+            repellendus architecto aperiam, sequi at.
+            Consectetur repudiandae eaque unde voluptates!
+            Recusandae, sit tenetur.</p>
+            <p>Lorem ipsum dolor 
+                sit amet consectetur adipisicing elit.
+                Tempora quibusdam quisquam nesciunt nisi excepturi enim rem eos,
+                repellendus architecto aperiam, sequi at.
+                Consectetur repudiandae eaque unde voluptates!
+                Recusandae, sit tenetur.</p>
+
+        <script>
+            (function contarParagrafos(){
+            var $paragrafos = document.querySelectorAll('p');
+            var x = 0;
+            while ($paragrafos[x]) {
+                $paragrafos[x].innerHTML = formatarTexto($paragrafos[x].innerHTML);
+                x++;
+            }
+
+            function formatarTexto(texto) {
+                if (texto.length <= 200) {
+                    return texto; 
+                } // else
+                var subTexto = texto.slice(0, 200);
+                return subTexto + '...';
+            }
+
+            })()
+
+            
+                
+            
+            
+            
+            
+        </script>
+       
+        
+    </body>
+</html>

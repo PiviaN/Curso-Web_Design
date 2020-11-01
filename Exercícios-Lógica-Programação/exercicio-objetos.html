@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Primeiros Objetos</title>
+        <meta charset="UTF-8">
+    </head>
+
+    <body>
+        <div id="output"></div>
+        <script>
+            
+            var produto1 = [
+            {"nome": 'juliano', 'idade': 18, 'genero': 'masculino'},
+            {"nome": 'romero britto', 'idade': 25, 'genero': 'masculino'},
+            {"nome": 'roberta', 'idade': 42, 'genero': 'feminino'}
+            ];
+
+            var msg = "";
+
+            for (i = 0; i < produto1.length; i++) {
+                
+                msg += produto1[i].nome + '<br>' + produto1[i].idade + '<br>' + produto1[i].genero + '<br><br>';
+            }
+
+            document.querySelector('#output').innerHTML = msg;
+
+        </script>
+    </body>
+</html>

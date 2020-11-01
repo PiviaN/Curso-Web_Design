@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Checkbox Dinâmico</title>
+        <style>
+        
+        body {
+            font-family:monospace;
+        }
+
+        label {
+            margin-right: 25px;
+        }
+
+        label span { /* este é o espaço total */
+            display: inline-block;
+            height: 30px;
+            width: 60px;
+            background: teal;
+            border-radius: 15px;
+        }
+        
+        label span:before { /* esta é a bolinha que é colocada no espaço */
+            content: "";
+            display: block;
+            background:red;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            margin: 5px;
+            transition: all .25s cubic-bezier(0.39, 0.575, 0.565, 1);
+            
+        }
+        label input:checked + span:before { /* este é o estado quando o input é checado */
+            transform:translateX(30px);
+            background-color: orange;
+            
+        }
+
+        label input:checked + span { /* este é o estado de apenas quando o input é checado,
+                                        não envolvendo a bolinha */
+            background-color: blueviolet;
+        }
+
+        input { /* aqui você pega o input padrão, que é o quadradinho, e esconde ele. 
+        você pode usar o visibility:hidden, porém não fica acessível. então, usamos o opacity */
+            width: 10px;
+            height:10px;
+            overflow: hidden;
+            opacity: 0;
+        }
+
+        label input:focus + span { /* aqui você está mostrando para o usuário quando a caixinha
+                                      estiver focada. outro parâmetro de acessibilidade */
+            box-shadow: 0 0 0 2px red;
+            box-sizing: border-box;
+        }
+
+        
+       
+        
+        </style>
+    </head>
+    <body>
+            <label>
+                <input type="checkbox">
+                <span></span>
+                Aceito
+            </label>
+
+            <label>
+                <input type="checkbox">
+                <span></span>
+                Concordo
+            </label>
+
+            <label>
+                <input type="checkbox">
+                <span></span>
+                AAAAAAA
+            </label>
+
+
+            
+    </body>
+</html>

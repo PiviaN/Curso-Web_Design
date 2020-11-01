@@ -1,0 +1,118 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Logica de Programação Javascript</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <h1>Lógica de programação com Javascript</h1>
+        
+        <script>
+            
+            var arr = ['1',20,3,4,5, 'kjkl', 20, "30"];
+            
+            // o 'every' só retornará 'true' se cada elemento do array satisfazer a condição
+            var sohNumeros = arr.every( function(el){
+                return typeof el === 'number';                
+            } );
+            console.log(sohNumeros);
+            
+            // no caso do 'some', se ao menos um elemento do array satisfazer a condição, ele retornará como 'true'
+            var aoMenosUmNumero = arr.some( function(el){
+                return typeof el === 'number';                
+            } );
+            console.log(aoMenosUmNumero);
+            
+            // o 'filter' vai filtrar a array e retornar suas especificações
+            var numeros = arr.filter(function(el, i, arr){
+                return typeof el === 'number';
+            });
+            console.log(numeros)
+            
+            // 'foreEch': para cada elemento, indice e array
+            arr.forEach(function(el, i, arr){
+                console.log('el=', el, '  |  i=', i, '  |  arr - ', arr.toString());
+            })
+            
+            // 'no indexOf', irá mostrar onde ele encontrou o '20' a partir do indice 5
+            var posicaoStr1 = arr.indexOf(20, 5);
+            console.log('posicaoStr1', posicaoStr1);
+            //no caso, ele encontrou no 6
+
+            // 'no lastIndexOf', ele irá voltar por onde viu o último índice de '20'
+            var posicaoStr2 = arr.lastIndexOf(20, 2);
+            console.log('posicaoStr2', posicaoStr2);
+            
+            // o 'map' irá retornar o elemento * o indice, porém, diferente do reduce, ele não irá reduzir para 1
+            console.log(numeros);
+            numeros = numeros.map(function(el, i, arr){
+                return el * i;
+            });            
+            console.log(numeros);
+            
+            // no 'concat', irá concatenar uma array com outra
+            var arr2 = arr.concat(numeros, 'ola', 'arr2', 100);
+            console.log(arr2);
+            
+            // a única diferença do 'join' para o 'toString' é o fato de que ele irá colocar alguma
+            // caráctere para separar cada elemento
+            var str = arr2.join(' -- ');
+            console.log(str);
+            
+            // o 'push' irá adicionar novos elementos ao final da array
+            arr.push('novo', 'item');
+            console.log(arr);
+            
+            // o 'pop' irá remover o último item da array
+            var ultimoItem = arr.pop();
+            console.log(ultimoItem);
+            console.log(arr);
+            
+            // o 'shift' irá remover o primeiro elemento da array
+            var primeiroItem = arr.shift();
+            console.log(primeiroItem);
+            console.log(arr);
+            
+            // o 'unshift' irá adicionar novos elementos ao começo da array
+            arr.unshift(true, false, 'unshift')
+            console.log(arr);
+            
+            numeros.shift();
+
+            // o 'reduce' servirá para quando você quer fazer com que todos os elementos
+            // da array retornem como apenas 1 só.
+            var somaDeArr = numeros.reduce(function(anterior, atual, i){
+                console.log('anterior', anterior, '  |  atual', atual, '  |  i', i)
+                return anterior + atual + i;
+            }, 10);
+            console.log(numeros);
+            console.log(somaDeArr);    
+            
+
+            // o 'reduceRight' é a mesma coisa que o reduce, porém ele irá começar a contar da direita
+            // para a esquerda. 'do final ao começo'
+            var testeReduce = ['1', '2', '3', '4', '5'].reduceRight(function(i, a){
+                return i + a;
+            });
+            console.log(testeReduce);
+            
+            var arr = [10,20,30];
+            // o 'reverse' apenas irá reverter a posição dos elementos
+            arr.reverse()
+            console.log(arr);
+
+            // o 'slice' irá 'fatiar' uma parte da array e retornará a parte cortada
+            console.log(arr2.slice(2,5));
+            
+            console.log('------')
+            console.log(arr2)
+
+            // o splice já é um método mais abrangente, no qual você pode fatiar elementos da array
+            // e no lugar dos elementos removidos, adicionar outros elementos.
+            var arr3 = arr2.splice(2, 3, 'limao', 'melao');
+            console.log(arr2);            
+            console.log(arr3);
+
+        </script>
+    </body>
+</html>

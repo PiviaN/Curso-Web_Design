@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Anos bissextos</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <script>
+            var indice = 1004;
+
+            while (indice <= 2025 ) {
+                
+            if (indice % 4 !== 0 || indice % 100 == 0 && indice % 400 !== 0 )  {
+                    document.write("<br>");
+            } else {
+                document.write(indice + '<br>');
+            } indice = indice + 4;
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,13 @@
+body{
+    font-family: serif;
+    font-size: 16px;
+    color: black;
+}
+
+a:after{
+    content: "[" attr(href) "]"; /* o attr(href) serve para mostrar na tela de impressão o link     
+                                    ele não funcionará se tiver entre aspas, porém, como podemos ver, apenas
+                                    os colchetes estão entre aspas. */
+    display: inline-block;
+    margin: 0 10px;
+}

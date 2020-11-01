@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Mostrar Pares</title>
+        <meta charset="UTF-8">
+        
+    </head>
+
+    <script>
+        
+        
+        var numeros = new Array(20, 35, 12, 49);
+
+
+        var somaDosPares = ePar(numeros);
+
+        alert('A soma dos números pares é: ' + somaDosPares);
+
+
+        function ePar(numeros) {
+            var vazio = 0;
+            for (var i = 0; i < numeros.length; i++) {
+                if (!isNaN(numeros[i] && numeros[i] % 2 == 0)) {
+                    vazio += numeros[i];
+                }
+            }   return vazio;
+        }
+    </script>
+</html>

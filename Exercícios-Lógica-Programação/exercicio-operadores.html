@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Logica de Programação Javascript</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <h1>Lógica de programação com Javascript</h1>
+        
+        <script>
+            
+            //pedir para o usuario digitar um numero
+            var n1 = prompt("Digite um número");
+                                    
+            //converter em numero inteiro
+            n1 = parseInt(n1);
+            //pedir para o usuario digitar outro numero
+            var n2 = prompt("Digite outro número");
+            //converter em numero inteiro
+            n2 = parseInt(n2);
+            
+            //mostrar a subtração concatenando com o texto "a subtração é: ..."
+            var subtracao = n1 - n2;
+            alert("A subtração dos dois números é: " + subtracao );
+            
+            
+            //mostrar a multiplicação concatenando com o texto "a multiplicação é: ..."
+            var multiplicacao = n1 * n2;
+            alert("A multiplicação é: " + multiplicacao);
+            //mostrar a divisão concatenando com o texto "a divisão é: ..."
+            var divisao = n1 / n2;
+            alert("A divisão é: " + divisao);
+            //mostrar a soma concatenando com o texto "a soma é: ..."
+            var soma = n1 + n2;
+            alert("A soma é: " + soma);
+
+            // adicional: mostrar a média
+            var media = (n1 + n2) / 2;
+            alert("A média é: " +media);
+
+            // adicional: mostrar o resto
+            var resto = (n1 % n2) / 2;
+            alert("O resto é: " +resto);
+
+            //adicional: exponencial
+            var exponencial = ( n1 ** n2);
+            alert("O primeiro número digitado elevado ao segundo número digitado é: " + exponencial);
+            
+        </script>
+    </body>
+</html>

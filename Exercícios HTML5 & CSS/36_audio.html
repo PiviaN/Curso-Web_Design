@@ -1,0 +1,27 @@
+<!doctype html>
+<!-- doctype informa ao agente de usuario a versão do html que deve ser renderizada-->
+<html lang="pt-br">
+    <head>
+        <title> pagina de exemplo estrutura basica </title>
+        <meta charset="utf-8">
+        <meta name="author" content="Daniel">
+        <meta name="description" content="descrição bacanuda">
+        <meta name="keywords" content="html5, tecnologia">
+    </head>
+    <body>
+        <h1>Audio</h1>
+        
+        <audio controls autoplay loop> !-- o 'controls' faz com que o browser controle a mídia. é uma
+                                           tag necessária. --!
+            <source src="media/mozart_trompa.mp3" type="audio/mp3"> <!-- O browser precisa definir qual a melhor
+                                                                        mídia para ele, então são necessárias
+                                                                        várias srcs com formatos diferentes.
+                                                                        Para isso, para cada src, usamos uma tag
+                                                                        'source', assim como o 'type' para informar
+                                                                        o tipo de mídia. -->
+            <source src="media/mozart_trompa.ogg" type="audio/ogg">
+            <p>Seu browser não suporta este recurso</p> <!-- caso o vídeo não funcionar no navegador do usuário,
+                                                            este texto funcionará como uma espécie de 'fallback' -->
+        </audio>
+    </body>
+</html>

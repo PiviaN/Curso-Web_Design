@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Exercício Retângulo</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <button onclick="calculoArea()">Calcular Área Total</button>
+        <div id="area-text"></div>
+
+        <script>
+            
+            var base = prompt('Digite a base do retângulo');
+            base = parseFloat(base);
+
+            var altura = prompt('Digite a altura do retângulo');
+            altura = parseFloat(altura);
+            
+
+            try {
+            var area = mostrarArea(base, altura);
+            } catch(e) {
+                alert(e);
+                
+            }
+            
+            
+            var areaText = document.querySelector('#area-text').innerHTML = "A área total é: " + area;
+            
+            
+
+            function calculoArea() {
+                
+
+            var base = prompt('Digite a base do retângulo');
+            base = parseFloat(base);
+
+            var altura = prompt('Digite a altura do retângulo');
+            altura = parseFloat(altura);
+            
+            
+            try {
+            var area = mostrarArea(base, altura);
+            } catch(e) {
+                alert(e);
+                return;
+            }
+            
+            alert('A área total do retângulo é: ' + area);
+            }
+
+            function mostrarArea(b, a) {    
+                if (isNaN(b) || isNaN(a)) {
+                    throw new Error('Por favor, preencha com números!');
+                }
+                
+                return b * a;
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Relógio em Tempo Real</title>
+        <meta charset="UTF-8">
+        
+        
+    </head>
+    <body>
+        <div id="msg-watch"></div>
+    </body>
+
+    <script>
+    (function(){
+
+        
+        var $relogio = document.getElementById('msg-watch');
+
+        function getHour() {
+        var data = new Date();
+        var horas = data.getHours();
+        var minutos = data.getMinutes();
+        var segundos = data.getSeconds();
+        
+        return horas + ':' + minutos + ':' + segundos;
+        }
+
+        function formata(t){
+                    return t < 10 ? "0" + t : t;
+        }
+
+        function mostraRelogio(atual){
+                $relogio.textContent = atual;
+        }
+
+        mostraRelogio(getHour());
+                
+                setInterval(function(){
+                    mostraRelogio(getHour());
+                }, 1000)
+        })()
+        
+
+
+    </script>
+</html>
